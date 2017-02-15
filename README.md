@@ -1,2 +1,4 @@
-# duf_tool
-STM32 use IAR build and creat dfu file and start download automatically
+dfuse-tool
+==========
+
+This is a set of python scripts to create dfu files and upload them to stm32 boards
