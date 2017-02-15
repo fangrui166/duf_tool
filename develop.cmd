@@ -17,6 +17,6 @@ If errorlevel 1 (
 
 python dfu-convert -b %MystartAddr%:%MyFilePath%\%MyName%.bin %MyFilePath%\%MyName%.dfu
 
-DfuSeCommand.exe -c -d --v --fn %MyFilePath%\%MyName%.dfu
+DfuSeCommand.exe -c -d --l --v --fn %MyFilePath%\%MyName%.dfu 
 
 :END
