@@ -8,7 +8,7 @@ set startAddr=0x08040000
 if .%1==.bl (
 	set projectPath=%MyProjectPath%\bootloader\EWARM
 	set projectName=controller_bl.ewp
-	set startAddr=0x08000000
+	set startAddr=0x08010000
 	if .%2==.debug (
 		set buildType=Debug
 	) ELSE (
