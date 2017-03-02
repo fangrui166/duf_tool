@@ -8,8 +8,9 @@ set MyFilePath=%MyprojectPath%\%MybuildType%\Exe
 ::IarBuild %MyprojectPath%\%MyProjectName% -build %MybuildType% -log all
 IarBuild %MyprojectPath%\%MyProjectName% -make %MybuildType% -log errors
 If errorlevel 1 (
-	Echo ****************
+	Echo *******************************************
 	Echo %MyProjectName% %MybuildType% Build Failed!
+	Echo *******************************************
 	goto END
 ) Else (
 	Echo %MyProjectName% %MybuildType% Build succeed!
