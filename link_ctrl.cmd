@@ -1,5 +1,6 @@
 @echo off
 set MyProjectPath=..\Link\link_controller_411
+set ComPort=com4
 
 set projectPath=%MyProjectPath%\SYS\EWARM
 set projectName=link_ctrl_sys.ewp
@@ -17,4 +18,5 @@ if .%1==.bl1 (
 )
 if .%2==.debug set buildType=Debug
 
-develop.cmd %projectPath% %projectName% %buildType% %startAddr%
+::develop.cmd %projectPath% %projectName% %buildType% %startAddr%
+develop_uart.cmd %projectPath% %projectName% %buildType% %startAddr% %ComPort%
