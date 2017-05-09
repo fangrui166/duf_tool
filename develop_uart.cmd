@@ -90,12 +90,11 @@ If %MyReturn%==0 (
 		echo=
 		set /a regnum+=1
 		echo Test count :  %regnum%
-		if %ToolVersion%==4 (
+		If %ToolVersion%==4 (
 			echo Please wait 8s to restart test ...
 			echo=
 			ping -n 7 127.0.0.1 > temp
-		)
-		else (
+		) Else (
 			echo Please wait 5s to restart test ...
 			echo=
 			ping -n 4 127.0.0.1 > temp
