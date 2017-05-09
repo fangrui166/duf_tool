@@ -59,7 +59,7 @@ if %ToolVersion%==1 (
 )
 if %ToolVersion%==2 (
 	echo Tool version: HTCFlashLoader v1.0.0
-	set %MyDownloadPar%=-c --pn %MyComNum% --br %MyBaudRate% -i STM32F4_11_512K
+	set MyDownloadPar=-c --pn %MyComNum% --br %MyBaudRate% -i STM32F4_11_512K
 	if %MystartAddr%==0x08000000 set MySector= -d --sec 1 0 --v --a
 	if %MystartAddr%==0x08008000 set MySector= -d --sec 3 2 3 4 --v --a
 	if %MystartAddr%==0x08040000 set MySector= -d --sec 2 6 7 --v --a
@@ -77,7 +77,7 @@ if %ToolVersion%==3 (
 )
 if %ToolVersion%==4 (
 	echo Tool version: HTCFlashLoader v1.0.0
-	set %MyDownloadPar%=-c --pn %MyComNum% --br %MyBaudRate% -i STM32F4_11_512K
+	set MyDownloadPar=-c --pn %MyComNum% --br %MyBaudRate% -i STM32F4_11_512K
 	set MySector=-d --sec 1 0 --v --a 0x08000000 --fn %MyFilePath%\link_ctrl_bl0.bin
 	set MySector=!MySector! -d --sec 1 1 --v --a 0x08004000 --fn %MyFilePath%\misc.bin
 	set MySector=!MySector! -d --sec 3 2 3 4 --v --a 0x08008000 --fn %MyFilePath%\link_ctrl_bl1.bin
